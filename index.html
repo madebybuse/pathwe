@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Support — PathWe</title>
+<meta name="description" content="PathWe — Support">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;600&family=Instrument+Serif&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#FFFBF7;--text:#33232A;--muted:#8A707B;--rule:#F2E1E1;--link:#C24763;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#221820;--text:#F7E9EC;--muted:#C9AEB8;--rule:#41303A;--link:#EFA3B6;color-scheme:dark}}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Figtree,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+main{max-width:640px;margin:0 auto;padding:48px 20px 72px}
+.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:40px}
+.brand{font:400 22px/1 "Instrument Serif",Georgia,serif;color:var(--text);text-decoration:none}
+.lang{display:flex;gap:4px}
+.lang button{font:600 13px/1 Figtree,sans-serif;letter-spacing:.04em;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer}
+.lang button[aria-pressed=true]{color:var(--text);border-color:var(--muted)}
+h1{font:400 44px/1.1 "Instrument Serif",Georgia,serif;margin:0 0 8px;letter-spacing:-.01em}
+.updated{color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 32px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
+h2{font:600 17px/1.4 Figtree,sans-serif;margin:32px 0 6px}
+p{margin:0 0 12px}
+a{color:var(--link);text-underline-offset:3px}
+nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);display:flex;gap:20px;flex-wrap:wrap;font-size:15px}
+[hidden]{display:none!important}
+@media (max-width:480px){h1{font-size:34px}main{padding-top:32px}}
+</style>
+</head>
+<body>
+<main>
+<div class="top">
+  <a class="brand" href="./">PathWe</a>
+  <div class="lang" role="group" aria-label="Language">
+    <button type="button" value="en" aria-pressed="true">EN</button>
+    <button type="button" value="tr" aria-pressed="false">TR</button>
+  </div>
+</div>
+<article data-lang="en">
+<h1>PathWe support</h1>
+<p class="updated">A relationship's story, on a timeline and a map</p>
+<h2>Write to PathWe</h2>
+<p>Questions, a bug, or something that isn't working the way it should: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Please mention your iPhone model and iOS version.</p>
+<h2>Restoring PathWe Plus</h2>
+<p>On a new iPhone or after reinstalling, open Settings in PathWe and tap Restore purchase, signed in with the Apple Account you bought Plus with.</p>
+<h2>Cancelling a subscription</h2>
+<p>Subscriptions are billed by the App Store. Manage or cancel them in the Settings app under your name → Subscriptions. Refunds are handled by Apple at reportaproblem.apple.com.</p>
+<h2>Your story and backups</h2>
+<p>PathWe keeps everything on your iPhone and has no cloud of its own. An iCloud or computer backup of your iPhone is the only way to bring your story to a new phone, so please keep one.</p>
+<nav class="links"><a href="privacy/">Privacy</a><a href="terms/">Terms of use</a></nav>
+</article>
+<article data-lang="tr" hidden>
+<h1>PathWe destek</h1>
+<p class="updated">Bir ilişkinin hikayesi, zaman çizelgesinde ve haritada</p>
+<h2>PathWe'ye yazın</h2>
+<p>Bir sorunuz, bir hata ya da olması gerektiği gibi çalışmayan bir şey varsa: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Lütfen iPhone modelinizi ve iOS sürümünüzü de yazın.</p>
+<h2>PathWe Plus'ı geri yükleme</h2>
+<p>Yeni bir iPhone'da ya da uygulamayı yeniden yükledikten sonra, Plus'ı satın aldığınız Apple Hesabı ile giriş yapmışken PathWe'de Ayarlar'ı açıp Satın alımı geri yükle'ye dokunun.</p>
+<h2>Aboneliği iptal etme</h2>
+<p>Abonelikler App Store tarafından faturalandırılır. Ayarlar uygulamasında adınıza dokunup Abonelikler bölümünden yönetebilir ya da iptal edebilirsiniz. İadeleri Apple, reportaproblem.apple.com üzerinden değerlendirir.</p>
+<h2>Hikayeniz ve yedekler</h2>
+<p>PathWe her şeyi iPhone'unuzda tutar ve kendine ait bir bulutu yoktur. Hikayenizi yeni bir telefona taşımanın tek yolu iPhone'unuzun iCloud ya da bilgisayar yedeğidir; lütfen bir yedek tutun.</p>
+<nav class="links"><a href="privacy/?lang=tr">Gizlilik</a><a href="terms/?lang=tr">Kullanım koşulları</a></nav>
+</article>
+</main>
+<script>
+(function(){
+  var q=new URLSearchParams(location.search).get('lang');
+  var pick=q||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');
+  function show(l){
+    document.documentElement.lang=l;
+    document.querySelectorAll('[data-lang]').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l});
+    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.value===l)});
+    document.title=document.querySelector('[data-lang="'+l+'"] h1').textContent+' — PathWe';
+  }
+  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){show(b.value)})});
+  show(pick==='tr'?'tr':'en');
+})();
+</script>
+</body>
+</html>
