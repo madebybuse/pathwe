@@ -17,9 +17,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Figtree,-
 main{max-width:640px;margin:0 auto;padding:48px 20px 72px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:40px}
 .brand{font:400 22px/1 "Instrument Serif",Georgia,serif;color:var(--text);text-decoration:none}
-.lang{display:flex;gap:4px}
-.lang button{font:600 13px/1 Figtree,sans-serif;letter-spacing:.04em;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer}
-.lang button[aria-pressed=true]{color:var(--text);border-color:var(--muted)}
+.lang select{font:600 13px/1 Figtree,sans-serif;color:var(--text);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer;-webkit-appearance:none;appearance:none}
 h1{font:400 44px/1.1 "Instrument Serif",Georgia,serif;margin:0 0 8px;letter-spacing:-.01em}
 .updated{color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 32px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
 h2{font:600 17px/1.4 Figtree,sans-serif;margin:32px 0 6px}
@@ -27,6 +25,8 @@ p{margin:0 0 12px}
 a{color:var(--link);text-underline-offset:3px}
 nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);display:flex;gap:20px;flex-wrap:wrap;font-size:15px}
 [hidden]{display:none!important}
+html[lang=vi] body,html[lang=vi] h2,html[lang=vi] .lang select{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+html[lang=vi] h1,html[lang=vi] .brand{font-family:"New York",Georgia,serif}
 @media (max-width:480px){h1{font-size:34px}main{padding-top:32px}}
 </style>
 </head>
@@ -34,9 +34,22 @@ nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);disp
 <main>
 <div class="top">
   <a class="brand" href="../">PathWe</a>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" value="en" aria-pressed="true">EN</button>
-    <button type="button" value="tr" aria-pressed="false">TR</button>
+  <div class="lang">
+  <select aria-label="Language">
+    <option value="en" selected>English</option>
+    <option value="tr">Türkçe</option>
+    <option value="es">Español</option>
+    <option value="pt">Português</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="de">Deutsch</option>
+    <option value="fr">Français</option>
+    <option value="it">Italiano</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="th">ไทย</option>
+    <option value="zh">简体中文</option>
+  </select>
   </div>
 </div>
 <article data-lang="en">
@@ -77,19 +90,229 @@ nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);disp
 <p><a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a> adresine yazın.</p>
 <nav class="links"><a href="../?lang=tr">Destek</a><a href="../privacy/?lang=tr">Gizlilik</a><a href="../terms/?lang=tr">Kullanım koşulları</a></nav>
 </article>
+<article data-lang="es" hidden>
+<h1>Términos de uso</h1>
+<p class="updated">Última actualización: 17 de septiembre de 2026</p>
+<h2>Su historia es suya</h2>
+<p>Todo lo que guardan en PathWe les pertenece. Se queda en su iPhone, donde nadie detrás de PathWe puede leerlo, usarlo ni compartirlo.</p>
+<h2>Tengan su propio respaldo</h2>
+<p>PathWe no tiene nube. Si este iPhone se pierde o se restablece, o si se elimina la app, lo que contiene se va también. Un respaldo cifrado del iPhone — en iCloud o en una computadora — es lo único que se interpone entre ustedes y perder su historia, así que, por favor, tengan uno. Después no se podrá recuperar nada.</p>
+<h2>PathWe Plus</h2>
+<p>Plus desbloquea los temas e íconos adicionales y elimina los límites de cuánto pueden agregar. Los planes mensual y anual se renuevan solos hasta que los cancelen; el plan de por vida es una compra única. Todo lo cobra el App Store — adminístrenlo o cancélenlo en la configuración de su cuenta de Apple, y soliciten el reembolso a Apple. Cancelar no borra nada de lo que hayan escrito; las funciones de Plus simplemente se vuelven a bloquear.</p>
+<h2>Uso justo</h2>
+<p>PathWe es para sus propios recuerdos. Por favor, no lo desarmen, no lo revendan ni lo usen para guardar información de otra persona sin que lo sepa.</p>
+<h2>Lo que PathWe puede y no puede prometer</h2>
+<p>PathWe se ofrece tal cual. Se desarrolla con cuidado y se prueba, pero ninguna app puede prometer que nunca tendrá un error ni perderá datos, y PathWe no se hace responsable de lo que una falla así les cueste. Donde la ley les dé derechos como consumidores, nada de lo escrito aquí se los quita.</p>
+<h2>Cambios</h2>
+<p>Si estos términos cambian de forma importante, la fecha de arriba cambia con ellos y la nueva versión llega con la próxima actualización.</p>
+<h2>Preguntas</h2>
+<p>Escriban a <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=es">Soporte</a><a href="../privacy/?lang=es">Privacidad</a><a href="../terms/?lang=es">Términos de uso</a></nav>
+</article>
+<article data-lang="pt" hidden>
+<h1>Termos de uso</h1>
+<p class="updated">Última atualização: 17 de setembro de 2026</p>
+<h2>A história é de vocês</h2>
+<p>Tudo o que vocês guardam no PathWe pertence a vocês. Fica no iPhone, onde ninguém por trás do PathWe pode ler, usar ou repassar.</p>
+<h2>Façam o próprio backup</h2>
+<p>O PathWe não tem nuvem. Se este iPhone for perdido ou redefinido, ou se o app for apagado, o que está nele vai junto. Um backup criptografado do iPhone — pelo iCloud ou em um computador — é a única coisa entre vocês e a perda da sua história, então, por favor, mantenham um. Depois, nada poderá ser recuperado.</p>
+<h2>PathWe Plus</h2>
+<p>O Plus desbloqueia os temas e ícones extras e remove os limites do quanto vocês podem adicionar. Os planos mensal e anual se renovam sozinhos até vocês cancelarem; o plano vitalício é uma compra única. Tudo é cobrado pela App Store — gerenciem ou cancelem nos ajustes da Conta Apple e peçam o reembolso à Apple. Cancelar não apaga nada do que vocês escreveram; os recursos do Plus apenas voltam a ficar bloqueados.</p>
+<h2>Uso justo</h2>
+<p>O PathWe é para as memórias de vocês. Por favor, não o desmontem, não o revendam e não o usem para guardar informações de outra pessoa sem que ela saiba.</p>
+<h2>O que o PathWe pode e não pode prometer</h2>
+<p>O PathWe é oferecido como está. É desenvolvido com cuidado e testado, mas nenhum app pode prometer que nunca terá um erro ou perderá dados, e o PathWe não se responsabiliza pelo que uma falha assim custar a vocês. Onde a lei der a vocês direitos de consumidor, nada escrito aqui os retira.</p>
+<h2>Alterações</h2>
+<p>Se estes termos mudarem de forma relevante, a data no topo muda junto e a nova versão chega com a próxima atualização.</p>
+<h2>Dúvidas</h2>
+<p>Escrevam para <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=pt">Suporte</a><a href="../privacy/?lang=pt">Privacidade</a><a href="../terms/?lang=pt">Termos de uso</a></nav>
+</article>
+<article data-lang="ja" hidden>
+<h1>利用規約</h1>
+<p class="updated">最終更新日：2026年9月17日</p>
+<h2>物語はおふたりのもの</h2>
+<p>PathWeに残したものはすべておふたりのものです。データはiPhoneの中にとどまり、PathWeの関係者が読んだり、使ったり、他人に渡したりすることはできません。</p>
+<h2>ご自身でバックアップを</h2>
+<p>PathWeにはクラウドがありません。このiPhoneを紛失したりリセットしたり、アプリを削除したりすると、中のデータも失われます。iCloudやコンピュータによる暗号化されたiPhoneのバックアップだけが、物語を失わないための唯一の手段です。必ずバックアップを取っておいてください。あとから復元することはできません。</p>
+<h2>PathWe Plus</h2>
+<p>Plusでは追加のテーマとアプリアイコンが使えるようになり、追加できる数の上限がなくなります。月額プランと年額プランは解約するまで自動更新され、買い切りプランは一度だけの購入です。お支払いはすべてApp Storeで行われます。管理や解約はApple Accountの設定から、返金はAppleにお申し込みください。解約しても書いた内容は削除されず、Plusの機能が再びロックされるだけです。</p>
+<h2>適切なご利用</h2>
+<p>PathWeはおふたり自身の思い出のためのものです。分解や転売、本人の知らないところで他人の情報を保存する目的での利用はご遠慮ください。</p>
+<h2>PathWeが約束できること、できないこと</h2>
+<p>PathWeは現状のまま提供されます。丁寧に開発・テストしていますが、不具合やデータ消失が決して起きないと約束できるアプリはなく、そうした障害による損害についてPathWeは責任を負いません。ただし、法律で認められた消費者としての権利を、本規約が制限することはありません。</p>
+<h2>変更について</h2>
+<p>本規約に重要な変更がある場合は、上部の日付も変わり、新しい版は次回のアップデートで届きます。</p>
+<h2>お問い合わせ</h2>
+<p><a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>までご連絡ください。</p>
+<nav class="links"><a href="../?lang=ja">サポート</a><a href="../privacy/?lang=ja">プライバシー</a><a href="../terms/?lang=ja">利用規約</a></nav>
+</article>
+<article data-lang="ko" hidden>
+<h1>이용약관</h1>
+<p class="updated">마지막 업데이트: 2026년 9월 17일</p>
+<h2>이야기는 두 분의 것</h2>
+<p>PathWe에 담은 모든 것은 두 분의 것이에요. 데이터는 iPhone 안에만 남고, PathWe 쪽의 누구도 읽거나 쓰거나 다른 사람에게 넘길 수 없어요.</p>
+<h2>직접 백업해 두세요</h2>
+<p>PathWe에는 클라우드가 없어요. 이 iPhone을 잃어버리거나 초기화하거나 앱을 삭제하면 안의 데이터도 함께 사라져요. iCloud나 컴퓨터를 통한 암호화된 iPhone 백업만이 이야기를 잃지 않는 유일한 방법이니, 꼭 백업해 두세요. 나중에는 아무것도 복구해 드릴 수 없어요.</p>
+<h2>PathWe Plus</h2>
+<p>Plus를 이용하면 추가 테마와 앱 아이콘이 열리고, 추가할 수 있는 개수 제한이 사라져요. 월간·연간 플랜은 해지할 때까지 자동으로 갱신되고, 평생 플랜은 한 번만 결제해요. 모든 결제는 App Store에서 이뤄져요. 관리나 해지는 Apple 계정 설정에서, 환불은 Apple에 요청해 주세요. 해지해도 작성한 내용은 지워지지 않고, Plus 기능만 다시 잠겨요.</p>
+<h2>올바른 이용</h2>
+<p>PathWe는 두 분의 추억을 위한 앱이에요. 분해하거나 되팔거나, 다른 사람의 정보를 몰래 담는 데 쓰지 말아 주세요.</p>
+<h2>PathWe가 약속할 수 있는 것과 없는 것</h2>
+<p>PathWe는 있는 그대로 제공돼요. 정성껏 만들고 테스트했지만, 어떤 앱도 오류나 데이터 손실이 절대 없다고 약속할 수는 없어요. 그런 장애로 생긴 손해에 대해 PathWe는 책임지지 않아요. 다만 법이 보장하는 소비자로서의 권리는 이 약관이 빼앗지 않아요.</p>
+<h2>변경 사항</h2>
+<p>이 약관이 중요하게 바뀌면 맨 위의 날짜도 함께 바뀌고, 새 버전은 다음 업데이트와 함께 제공돼요.</p>
+<h2>문의</h2>
+<p><a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>로 문의해 주세요.</p>
+<nav class="links"><a href="../?lang=ko">고객 지원</a><a href="../privacy/?lang=ko">개인정보 보호</a><a href="../terms/?lang=ko">이용약관</a></nav>
+</article>
+<article data-lang="de" hidden>
+<h1>Nutzungsbedingungen</h1>
+<p class="updated">Zuletzt aktualisiert am 17. September 2026</p>
+<h2>Eure Geschichte gehört euch</h2>
+<p>Alles, was ihr in PathWe festhaltet, gehört euch. Es bleibt auf eurem iPhone, wo niemand hinter PathWe es lesen, nutzen oder weitergeben kann.</p>
+<h2>Macht ein eigenes Backup</h2>
+<p>PathWe hat keine Cloud. Geht dieses iPhone verloren, wird es zurückgesetzt oder die App gelöscht, ist auch alles darin weg. Ein verschlüsseltes iPhone-Backup — über iCloud oder einen Computer — ist das Einzige, was euch vor dem Verlust eurer Geschichte schützt, also legt bitte eins an. Hinterher lässt sich nichts für euch wiederherstellen.</p>
+<h2>PathWe Plus</h2>
+<p>Plus schaltet die zusätzlichen Designs und App-Symbole frei und hebt die Grenzen auf, wie viel ihr hinzufügen könnt. Monats- und Jahrespläne verlängern sich automatisch, bis ihr kündigt; der lebenslange Plan ist ein Einmalkauf. Abgerechnet wird alles über den App Store — verwaltet oder kündigt ihn in den Einstellungen eures Apple Accounts, und bittet Apple um eine Erstattung. Eine Kündigung löscht nichts von dem, was ihr geschrieben habt; die Plus-Funktionen werden einfach wieder gesperrt.</p>
+<h2>Faire Nutzung</h2>
+<p>PathWe ist für eure eigenen Erinnerungen. Bitte zerlegt es nicht, verkauft es nicht weiter und speichert darin keine Daten anderer ohne deren Wissen.</p>
+<h2>Was PathWe versprechen kann und was nicht</h2>
+<p>PathWe wird so angeboten, wie es ist. Es ist sorgfältig gebaut und getestet, aber keine App kann versprechen, nie einen Fehler zu haben oder Daten zu verlieren, und PathWe haftet nicht für das, was euch ein solcher Ausfall kostet. Wo das Gesetz euch Verbraucherrechte gibt, nimmt nichts hier sie euch.</p>
+<h2>Änderungen</h2>
+<p>Ändern sich diese Bedingungen wesentlich, ändert sich auch das Datum oben, und die neue Fassung kommt mit dem nächsten Update.</p>
+<h2>Fragen</h2>
+<p>Schreibt an <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=de">Support</a><a href="../privacy/?lang=de">Datenschutz</a><a href="../terms/?lang=de">Nutzungsbedingungen</a></nav>
+</article>
+<article data-lang="fr" hidden>
+<h1>Conditions d'utilisation</h1>
+<p class="updated">Dernière mise à jour : 17 septembre 2026</p>
+<h2>Votre histoire vous appartient</h2>
+<p>Tout ce que vous mettez dans PathWe vous appartient. Tout reste sur votre iPhone, où personne derrière PathWe ne peut le lire, l'utiliser ou le transmettre.</p>
+<h2>Faites votre propre sauvegarde</h2>
+<p>PathWe n'a pas de cloud. Si cet iPhone est perdu ou réinitialisé, ou si l'app est supprimée, son contenu disparaît aussi. Une sauvegarde chiffrée de l'iPhone — via iCloud ou un ordinateur — est la seule chose qui vous protège de la perte de votre histoire, alors gardez-en une. Rien ne pourra être récupéré pour vous ensuite.</p>
+<h2>PathWe Plus</h2>
+<p>Plus débloque les thèmes et icônes supplémentaires et lève les limites sur ce que vous pouvez ajouter. Les formules mensuelle et annuelle se renouvellent d'elles-mêmes jusqu'à résiliation ; la formule à vie est un achat unique. Tout est facturé par l'App Store — gérez ou résiliez dans les réglages de votre compte Apple, et demandez un remboursement à Apple. Résilier ne supprime rien de ce que vous avez écrit ; les fonctions Plus se verrouillent simplement à nouveau.</p>
+<h2>Usage loyal</h2>
+<p>PathWe est fait pour vos propres souvenirs. Merci de ne pas le désassembler, le revendre ou l'utiliser pour garder des informations sur quelqu'un à son insu.</p>
+<h2>Ce que PathWe peut et ne peut pas promettre</h2>
+<p>PathWe est fourni tel quel. Il est conçu avec soin et testé, mais aucune app ne peut promettre de ne jamais avoir de bug ni de perdre de données, et PathWe n'est pas responsable de ce qu'une telle défaillance vous coûte. Là où la loi vous accorde des droits de consommateur, rien de ce qui est écrit ici ne vous les retire.</p>
+<h2>Modifications</h2>
+<p>Si ces conditions changent de façon importante, la date en haut change aussi et la nouvelle version arrive avec la prochaine mise à jour.</p>
+<h2>Questions</h2>
+<p>Écrivez à <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=fr">Assistance</a><a href="../privacy/?lang=fr">Confidentialité</a><a href="../terms/?lang=fr">Conditions d'utilisation</a></nav>
+</article>
+<article data-lang="it" hidden>
+<h1>Termini d'uso</h1>
+<p class="updated">Ultimo aggiornamento: 17 settembre 2026</p>
+<h2>La vostra storia è vostra</h2>
+<p>Tutto ciò che mettete in PathWe vi appartiene. Resta sul vostro iPhone, dove nessuno dietro PathWe può leggerlo, usarlo o passarlo ad altri.</p>
+<h2>Fate il vostro backup</h2>
+<p>PathWe non ha un cloud. Se questo iPhone viene perso o inizializzato, o se l'app viene eliminata, anche il suo contenuto va perso. Un backup cifrato dell'iPhone — tramite iCloud o un computer — è l'unica cosa che vi separa dal perdere la vostra storia, quindi tenetene uno. Dopo non sarà possibile recuperare nulla.</p>
+<h2>PathWe Plus</h2>
+<p>Plus sblocca i temi e le icone extra ed elimina i limiti su quanto potete aggiungere. I piani mensile e annuale si rinnovano da soli finché non li disdite; il piano a vita è un acquisto unico. Tutto viene addebitato dall'App Store — gestitelo o disdite nelle impostazioni del vostro Account Apple, e chiedete il rimborso ad Apple. Disdire non elimina nulla di ciò che avete scritto; le funzioni Plus tornano semplicemente bloccate.</p>
+<h2>Uso corretto</h2>
+<p>PathWe è per i vostri ricordi. Per favore non smontatelo, non rivendetelo e non usatelo per conservare informazioni di qualcuno a sua insaputa.</p>
+<h2>Cosa PathWe può e non può promettere</h2>
+<p>PathWe è fornito così com'è. È realizzato con cura e testato, ma nessuna app può promettere di non avere mai un errore o di non perdere mai dati, e PathWe non è responsabile di quanto un simile guasto possa costarvi. Dove la legge vi riconosce diritti come consumatori, nulla di quanto scritto qui li toglie.</p>
+<h2>Modifiche</h2>
+<p>Se questi termini cambiano in modo rilevante, cambia anche la data in alto e la nuova versione arriva con il prossimo aggiornamento.</p>
+<h2>Domande</h2>
+<p>Scrivete a <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=it">Assistenza</a><a href="../privacy/?lang=it">Privacy</a><a href="../terms/?lang=it">Termini d'uso</a></nav>
+</article>
+<article data-lang="id" hidden>
+<h1>Ketentuan penggunaan</h1>
+<p class="updated">Terakhir diperbarui 17 September 2026</p>
+<h2>Kisah kalian milik kalian</h2>
+<p>Semua yang kalian simpan di PathWe adalah milik kalian. Semuanya tetap di iPhone kalian, dan tidak ada siapa pun di balik PathWe yang bisa membaca, menggunakan, atau membagikannya.</p>
+<h2>Buat cadangan sendiri</h2>
+<p>PathWe tidak punya cloud. Jika iPhone ini hilang atau direset, atau aplikasinya dihapus, isinya ikut hilang. Cadangan iPhone yang terenkripsi — lewat iCloud atau komputer — adalah satu-satunya pelindung kisah kalian, jadi buatlah cadangan. Setelah itu, tidak ada yang bisa dipulihkan.</p>
+<h2>PathWe Plus</h2>
+<p>Plus membuka tema dan ikon aplikasi tambahan serta menghapus batas jumlah yang bisa kalian tambahkan. Paket bulanan dan tahunan diperpanjang otomatis sampai kalian membatalkannya; paket seumur hidup adalah pembelian sekali. Semua ditagih oleh App Store — kelola atau batalkan di pengaturan Akun Apple kalian, dan ajukan pengembalian dana ke Apple. Membatalkan tidak menghapus apa pun yang telah kalian tulis; fitur Plus hanya terkunci kembali.</p>
+<h2>Penggunaan yang wajar</h2>
+<p>PathWe untuk kenangan kalian sendiri. Mohon jangan membongkar, menjual kembali, atau memakainya untuk menyimpan informasi orang lain tanpa sepengetahuan mereka.</p>
+<h2>Yang bisa dan tidak bisa dijanjikan PathWe</h2>
+<p>PathWe disediakan sebagaimana adanya. Aplikasi ini dibuat dengan cermat dan diuji, tetapi tidak ada aplikasi yang bisa menjamin tidak akan pernah ada bug atau kehilangan data, dan PathWe tidak bertanggung jawab atas kerugian akibat kegagalan semacam itu. Jika hukum memberi kalian hak sebagai konsumen, tidak ada yang tertulis di sini yang menghapusnya.</p>
+<h2>Perubahan</h2>
+<p>Jika ketentuan ini berubah secara penting, tanggal di atas ikut berubah dan versi baru hadir bersama pembaruan berikutnya.</p>
+<h2>Pertanyaan</h2>
+<p>Kirim pesan ke <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=id">Bantuan</a><a href="../privacy/?lang=id">Privasi</a><a href="../terms/?lang=id">Ketentuan penggunaan</a></nav>
+</article>
+<article data-lang="vi" hidden>
+<h1>Điều khoản sử dụng</h1>
+<p class="updated">Cập nhật lần cuối: 17 tháng 9, 2026</p>
+<h2>Câu chuyện là của hai bạn</h2>
+<p>Mọi thứ hai bạn lưu trong PathWe đều thuộc về hai bạn. Tất cả ở lại trên iPhone, nơi không ai đứng sau PathWe có thể đọc, sử dụng hay chuyển cho người khác.</p>
+<h2>Hãy tự sao lưu</h2>
+<p>PathWe không có đám mây. Nếu iPhone này bị mất hoặc đặt lại, hay ứng dụng bị xóa, mọi thứ trong đó cũng mất theo. Bản sao lưu iPhone được mã hóa — qua iCloud hoặc máy tính — là thứ duy nhất giữ cho câu chuyện của hai bạn không bị mất, vì vậy hãy luôn có một bản. Sau đó sẽ không thể khôi phục gì.</p>
+<h2>PathWe Plus</h2>
+<p>Plus mở khóa thêm chủ đề và biểu tượng ứng dụng, đồng thời bỏ giới hạn số lượng hai bạn có thể thêm. Gói tháng và gói năm tự gia hạn cho đến khi hai bạn hủy; gói trọn đời là mua một lần. Tất cả được App Store thanh toán — quản lý hoặc hủy trong cài đặt Tài khoản Apple, và yêu cầu Apple hoàn tiền. Hủy gói không xóa bất cứ điều gì hai bạn đã viết; các tính năng Plus chỉ khóa lại.</p>
+<h2>Sử dụng đúng mục đích</h2>
+<p>PathWe dành cho kỷ niệm của chính hai bạn. Vui lòng không tháo gỡ, bán lại hay dùng để lưu thông tin của người khác khi họ không biết.</p>
+<h2>Điều PathWe có thể và không thể hứa</h2>
+<p>PathWe được cung cấp theo hiện trạng. Ứng dụng được làm cẩn thận và kiểm thử, nhưng không ứng dụng nào có thể hứa sẽ không bao giờ có lỗi hay mất dữ liệu, và PathWe không chịu trách nhiệm về thiệt hại do sự cố như vậy gây ra. Nếu pháp luật trao cho hai bạn quyền của người tiêu dùng, không điều gì ở đây làm mất đi các quyền đó.</p>
+<h2>Thay đổi</h2>
+<p>Nếu các điều khoản này thay đổi đáng kể, ngày ở trên cùng cũng thay đổi theo và phiên bản mới sẽ có trong bản cập nhật tiếp theo.</p>
+<h2>Câu hỏi</h2>
+<p>Hãy viết thư đến <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>.</p>
+<nav class="links"><a href="../?lang=vi">Hỗ trợ</a><a href="../privacy/?lang=vi">Quyền riêng tư</a><a href="../terms/?lang=vi">Điều khoản sử dụng</a></nav>
+</article>
+<article data-lang="th" hidden>
+<h1>ข้อกำหนดการใช้งาน</h1>
+<p class="updated">อัปเดตล่าสุด 17 กันยายน 2026</p>
+<h2>เรื่องราวเป็นของคุณ</h2>
+<p>ทุกอย่างที่ใส่ไว้ใน PathWe เป็นของคุณทั้งคู่ ข้อมูลอยู่บน iPhone และไม่มีใครเบื้องหลัง PathWe อ่าน ใช้ หรือส่งต่อได้</p>
+<h2>สำรองข้อมูลด้วยตัวเอง</h2>
+<p>PathWe ไม่มีคลาวด์ หาก iPhone เครื่องนี้หาย ถูกรีเซ็ต หรือแอปถูกลบ ข้อมูลข้างในจะหายไปด้วย การสำรองข้อมูล iPhone แบบเข้ารหัส — ผ่าน iCloud หรือคอมพิวเตอร์ — เป็นสิ่งเดียวที่ปกป้องเรื่องราวของคุณไม่ให้สูญหาย โปรดสำรองไว้เสมอ หลังจากนั้นจะไม่สามารถกู้คืนอะไรได้</p>
+<h2>PathWe Plus</h2>
+<p>Plus ปลดล็อคธีมและไอคอนแอปเพิ่มเติม และยกเลิกข้อจำกัดจำนวนรายการที่เพิ่มได้ แผนรายเดือนและรายปีต่ออายุอัตโนมัติจนกว่าจะยกเลิก ส่วนแผนตลอดชีพเป็นการซื้อครั้งเดียว ทั้งหมดเรียกเก็บเงินโดย App Store — จัดการหรือยกเลิกได้ในการตั้งค่าบัญชี Apple และขอเงินคืนจาก Apple การยกเลิกไม่ลบสิ่งที่คุณเขียนไว้ เพียงแค่ฟีเจอร์ Plus จะถูกล็อคอีกครั้ง</p>
+<h2>การใช้งานที่เหมาะสม</h2>
+<p>PathWe มีไว้สำหรับความทรงจำของคุณเอง โปรดอย่าแยกส่วน ขายต่อ หรือใช้เก็บข้อมูลของผู้อื่นโดยที่เขาไม่รู้</p>
+<h2>สิ่งที่ PathWe สัญญาได้และสัญญาไม่ได้</h2>
+<p>PathWe ให้บริการตามสภาพที่เป็นอยู่ แอปถูกสร้างและทดสอบอย่างระมัดระวัง แต่ไม่มีแอปใดรับประกันได้ว่าจะไม่มีข้อผิดพลาดหรือข้อมูลสูญหาย และ PathWe ไม่รับผิดชอบต่อความเสียหายจากความขัดข้องดังกล่าว ในกรณีที่กฎหมายให้สิทธิ์คุณในฐานะผู้บริโภค ข้อความในที่นี้ไม่ได้ตัดสิทธิ์นั้น</p>
+<h2>การเปลี่ยนแปลง</h2>
+<p>หากข้อกำหนดเหล่านี้เปลี่ยนแปลงอย่างมีนัยสำคัญ วันที่ด้านบนจะเปลี่ยนตาม และเวอร์ชันใหม่จะมาพร้อมการอัปเดตครั้งถัดไป</p>
+<h2>คำถาม</h2>
+<p>ติดต่อ <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a></p>
+<nav class="links"><a href="../?lang=th">ช่วยเหลือ</a><a href="../privacy/?lang=th">ความเป็นส่วนตัว</a><a href="../terms/?lang=th">ข้อกำหนดการใช้งาน</a></nav>
+</article>
+<article data-lang="zh" hidden>
+<h1>使用条款</h1>
+<p class="updated">最后更新：2026年9月17日</p>
+<h2>你们的故事属于你们</h2>
+<p>你们放进 PathWe 的一切都属于你们。数据只留在你们的 iPhone 上，PathWe 背后的任何人都无法读取、使用或转交。</p>
+<h2>请自行备份</h2>
+<p>PathWe 没有云端。如果这台 iPhone 丢失或被重置，或 App 被删除，里面的内容也会一起消失。通过 iCloud 或电脑进行的加密 iPhone 备份，是你们不丢失故事的唯一保障，请务必保留一份。事后无法为你们恢复任何内容。</p>
+<h2>PathWe Plus</h2>
+<p>Plus 会解锁更多主题和 App 图标，并取消可添加内容的数量限制。月度和年度方案会自动续订，直到你们取消；永久方案为一次性购买。所有费用均由 App Store 收取——可在 Apple 账户设置中管理或取消，并向 Apple 申请退款。取消不会删除你们写下的任何内容，只是 Plus 功能会重新锁定。</p>
+<h2>合理使用</h2>
+<p>PathWe 只用于你们自己的回忆。请勿拆解、转售，或在他人不知情的情况下存储其信息。</p>
+<h2>PathWe 能承诺与不能承诺的</h2>
+<p>PathWe 按现状提供。它经过精心开发和测试，但没有任何 App 能保证永远没有错误或不会丢失数据，PathWe 不对此类故障造成的损失承担责任。法律赋予你们的消费者权利，不因此处任何条款而丧失。</p>
+<h2>变更</h2>
+<p>如果这些条款有重要变更，顶部的日期会随之更新，新版本将随下次更新发布。</p>
+<h2>问题</h2>
+<p>请写信至 <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>。</p>
+<nav class="links"><a href="../?lang=zh">支持</a><a href="../privacy/?lang=zh">隐私</a><a href="../terms/?lang=zh">使用条款</a></nav>
+</article>
 </main>
 <script>
 (function(){
   var q=new URLSearchParams(location.search).get('lang');
-  var pick=q||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');
+  var known=['en','tr','es','pt','ja','ko','de','fr','it','id','vi','th','zh'];
+  var pick=q||(navigator.language||'').toLowerCase().slice(0,2);
   function show(l){
     document.documentElement.lang=l;
     document.querySelectorAll('[data-lang]').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l});
-    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.value===l)});
+    document.querySelector('.lang select').value=l;
     document.title=document.querySelector('[data-lang="'+l+'"] h1').textContent+' — PathWe';
   }
-  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){show(b.value)})});
-  show(pick==='tr'?'tr':'en');
+  document.querySelector('.lang select').addEventListener('change',function(e){show(e.target.value)});
+  show(known.indexOf(pick)>=0?pick:'en');
 })();
 </script>
 </body>

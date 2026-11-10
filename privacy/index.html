@@ -17,9 +17,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Figtree,-
 main{max-width:640px;margin:0 auto;padding:48px 20px 72px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:40px}
 .brand{font:400 22px/1 "Instrument Serif",Georgia,serif;color:var(--text);text-decoration:none}
-.lang{display:flex;gap:4px}
-.lang button{font:600 13px/1 Figtree,sans-serif;letter-spacing:.04em;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer}
-.lang button[aria-pressed=true]{color:var(--text);border-color:var(--muted)}
+.lang select{font:600 13px/1 Figtree,sans-serif;color:var(--text);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer;-webkit-appearance:none;appearance:none}
 h1{font:400 44px/1.1 "Instrument Serif",Georgia,serif;margin:0 0 8px;letter-spacing:-.01em}
 .updated{color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 32px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
 h2{font:600 17px/1.4 Figtree,sans-serif;margin:32px 0 6px}
@@ -27,6 +25,8 @@ p{margin:0 0 12px}
 a{color:var(--link);text-underline-offset:3px}
 nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);display:flex;gap:20px;flex-wrap:wrap;font-size:15px}
 [hidden]{display:none!important}
+html[lang=vi] body,html[lang=vi] h2,html[lang=vi] .lang select{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+html[lang=vi] h1,html[lang=vi] .brand{font-family:"New York",Georgia,serif}
 @media (max-width:480px){h1{font-size:34px}main{padding-top:32px}}
 </style>
 </head>
@@ -34,9 +34,22 @@ nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);disp
 <main>
 <div class="top">
   <a class="brand" href="../">PathWe</a>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" value="en" aria-pressed="true">EN</button>
-    <button type="button" value="tr" aria-pressed="false">TR</button>
+  <div class="lang">
+  <select aria-label="Language">
+    <option value="en" selected>English</option>
+    <option value="tr">Türkçe</option>
+    <option value="es">Español</option>
+    <option value="pt">Português</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="de">Deutsch</option>
+    <option value="fr">Français</option>
+    <option value="it">Italiano</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="th">ไทย</option>
+    <option value="zh">简体中文</option>
+  </select>
   </div>
 </div>
 <article data-lang="en">
@@ -81,19 +94,251 @@ nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);disp
 <p>Ayarlar'daki Hikayemizi sonlandır, bu iPhone'daki her tarihi, notu, fotoğrafı ve iğneyi tek seferde siler. Uygulamayı silmek de aynısını yapar. İkisi de geride kopya bırakmaz, çünkü zaten başka hiçbir yerde kopya yoktu.</p>
 <nav class="links"><a href="../?lang=tr">Destek</a><a href="../privacy/?lang=tr">Gizlilik</a><a href="../terms/?lang=tr">Kullanım koşulları</a></nav>
 </article>
+<article data-lang="es" hidden>
+<h1>Privacidad</h1>
+<p class="updated">Última actualización: 17 de septiembre de 2026</p>
+<h2>Lo que PathWe guarda</h2>
+<p>Sus nombres, su fecha de inicio, cada momento que agregan, su nota y su foto, y cada lugar que marcan. Todo vive en el almacenamiento propio de PathWe en este iPhone. No hay una cuenta en la que iniciar sesión, ni ningún lugar al que enviar nada de esto.</p>
+<h2>Fotos</h2>
+<p>Antes de guardarse, cada foto se vuelve a codificar. Así se eliminan los metadatos que escribió la cámara — incluidas la coordenada GPS y la fecha y hora — y nunca llegan al disco. El único lugar que PathWe conoce de un recuerdo es el que ustedes mismos marcaron.</p>
+<h2>Lugares y el mapa</h2>
+<p>El mapa muestra solo los lugares que ustedes marcan. Cuando buscan un lugar, o cuando PathWe convierte una coordenada marcada en un nombre como una ciudad o un país, esa única consulta va a Apple Maps — igual que cualquier mapa en iOS, y bajo la política de privacidad de Apple. Si la consulta falla, PathWe etiqueta el pin con su coordenada.</p>
+<h2>Recordatorios</h2>
+<p>iOS programa y entrega los recordatorios en este iPhone. Nada sobre un momento sale del dispositivo para que el recordatorio llegue.</p>
+<h2>Face ID y código</h2>
+<p>Si activan el bloqueo de la app, iOS hace la verificación y solo le dice a PathWe si se superó. Su rostro, su huella y su código nunca están disponibles para PathWe ni se guardan en él.</p>
+<h2>PathWe Plus</h2>
+<p>Las compras se hacen a través del App Store. Apple recibe el pago, y PathWe nunca ve su tarjeta, su cuenta de Apple ni su dirección de facturación. El registro de una compra en el App Store — qué plan, cuándo y a qué precio — se comparte con RevenueCat, el servicio que PathWe usa para llevar el control de las suscripciones de Plus. Ese registro lleva un ID aleatorio creado en este iPhone, y nada de su historia.</p>
+<h2>Lo que PathWe no hace</h2>
+<p>Sin rastreo, sin publicidad y sin analíticas sobre cómo usan la app. Aparte de las búsquedas de mapa mencionadas arriba y del App Store, el único lugar al que PathWe envía algo es RevenueCat: los registros de compra descritos en PathWe Plus, junto con datos básicos como la versión de la app y de iOS y su región. Sus nombres, momentos, notas, fotos y lugares nunca salen de este iPhone.</p>
+<h2>Terminar su historia</h2>
+<p>Terminar nuestra historia, en Configuración, borra de este iPhone de una sola vez cada fecha, nota, foto y pin. Eliminar la app hace lo mismo. Ninguna de las dos opciones deja una copia, porque nunca hubo una copia en ningún otro lugar.</p>
+<nav class="links"><a href="../?lang=es">Soporte</a><a href="../privacy/?lang=es">Privacidad</a><a href="../terms/?lang=es">Términos de uso</a></nav>
+</article>
+<article data-lang="pt" hidden>
+<h1>Privacidade</h1>
+<p class="updated">Última atualização: 17 de setembro de 2026</p>
+<h2>O que o PathWe guarda</h2>
+<p>Os nomes de vocês, a data de início, cada momento que vocês adicionam, com nota e foto, e cada lugar que marcam. Tudo fica no armazenamento do próprio PathWe neste iPhone. Não há conta para entrar, nem lugar para onde nada disso seja enviado.</p>
+<h2>Fotos</h2>
+<p>Antes de ser salva, cada foto é recodificada. Isso remove os metadados gravados pela câmera — incluindo a coordenada GPS e o horário — e eles nunca chegam ao disco. O único lugar que o PathWe conhece de uma memória é o que vocês mesmos marcaram.</p>
+<h2>Lugares e o mapa</h2>
+<p>O mapa mostra só os lugares que vocês marcam. Quando vocês buscam um lugar, ou quando o PathWe transforma uma coordenada marcada em um nome, como uma cidade ou um país, essa única consulta vai para o Apple Maps — como qualquer mapa no iOS, e coberta pela política de privacidade da Apple. Se a consulta falhar, o PathWe identifica o pin pela coordenada.</p>
+<h2>Lembretes</h2>
+<p>O iOS agenda e entrega os lembretes neste iPhone. Nada sobre um momento sai do aparelho para que o lembrete chegue.</p>
+<h2>Face ID e código</h2>
+<p>Se vocês ativarem o bloqueio do app, o iOS faz a verificação e só informa ao PathWe se ela passou. O rosto, a digital e o código de vocês nunca ficam disponíveis para o PathWe nem são guardados por ele.</p>
+<h2>PathWe Plus</h2>
+<p>As compras são feitas pela App Store. A Apple recebe o pagamento, e o PathWe nunca vê o cartão, a Conta Apple nem o endereço de cobrança de vocês. O registro de uma compra na App Store — qual plano, quando e por qual preço — é compartilhado com a RevenueCat, o serviço que o PathWe usa para acompanhar as assinaturas do Plus. Esse registro leva um ID aleatório criado neste iPhone, e nada da história de vocês.</p>
+<h2>O que o PathWe não faz</h2>
+<p>Sem rastreamento, sem publicidade e sem análises de como vocês usam o app. Além das consultas de mapa citadas acima e da App Store, o único lugar para onde o PathWe envia algo é a RevenueCat: os registros de compra descritos em PathWe Plus, com dados básicos como a versão do app e do iOS e a região. Os nomes, momentos, notas, fotos e lugares de vocês nunca saem deste iPhone.</p>
+<h2>Encerrar a história de vocês</h2>
+<p>Encerrar nossa história, em Ajustes, apaga deste iPhone de uma só vez cada data, nota, foto e pin. Apagar o app faz o mesmo. Nenhuma das duas opções deixa uma cópia, porque nunca houve cópia em nenhum outro lugar.</p>
+<nav class="links"><a href="../?lang=pt">Suporte</a><a href="../privacy/?lang=pt">Privacidade</a><a href="../terms/?lang=pt">Termos de uso</a></nav>
+</article>
+<article data-lang="ja" hidden>
+<h1>プライバシー</h1>
+<p class="updated">最終更新日：2026年9月17日</p>
+<h2>PathWeが保存するもの</h2>
+<p>おふたりの名前、始まりの日、追加したすべての思い出とそのメモや写真、ピンを立てた場所。すべてこのiPhone上のPathWe専用の保存領域にあります。サインインするアカウントはなく、どこかへ送られることもありません。</p>
+<h2>写真</h2>
+<p>写真は保存前に再エンコードされます。その際、カメラが書き込んだメタデータ（GPS座標や撮影日時を含む）は削除され、ディスクには保存されません。PathWeが思い出について知っている場所は、おふたりが自分でピンを立てた場所だけです。</p>
+<h2>場所と地図</h2>
+<p>地図に表示されるのは、おふたりがピンを立てた場所だけです。場所を検索したときや、PathWeがピンの座標を街や国の名前に変換するときは、その1回の検索がApple Mapsに送られます。iOSのほかの地図と同じ仕組みで、Appleのプライバシーポリシーが適用されます。検索に失敗した場合、PathWeはピンに座標を表示します。</p>
+<h2>リマインダー</h2>
+<p>リマインダーは、このiPhone上でiOSが予約・配信します。通知を届けるために、思い出の情報が端末の外へ出ることはありません。</p>
+<h2>Face IDとパスコード</h2>
+<p>アプリロックをオンにすると、確認はiOSが行い、PathWeには成功したかどうかだけが伝えられます。顔、指紋、パスコードがPathWeから参照されることはなく、PathWeが保存することもありません。</p>
+<h2>PathWe Plus</h2>
+<p>購入はApp Storeを通じて行われます。お支払いはAppleが受け取り、カード、Apple Account、請求先住所をPathWeが見ることはありません。App Storeの購入記録（どのプランを、いつ、いくらで）は、PathWeがPlusのサブスクリプション管理に使うサービス、RevenueCatと共有されます。この記録に含まれるのはこのiPhoneで作られたランダムなIDだけで、おふたりの物語は一切含まれません。</p>
+<h2>PathWeがしないこと</h2>
+<p>トラッキングも広告も、アプリの使い方の分析もありません。上記の地図検索とApp Storeを除き、PathWeが何かを送るのはRevenueCatだけです。送られるのは「PathWe Plus」の項目で説明した購入記録と、アプリやiOSのバージョン、地域などの基本情報です。おふたりの名前、思い出、メモ、写真、場所がこのiPhoneから出ることはありません。</p>
+<h2>物語を終えること</h2>
+<p>設定の「ふたりの物語を終える」は、このiPhoneからすべての日付、メモ、写真、ピンを一度に削除します。アプリを削除しても同じです。どちらもコピーは残りません。もともと、ほかの場所にコピーは存在しないからです。</p>
+<nav class="links"><a href="../?lang=ja">サポート</a><a href="../privacy/?lang=ja">プライバシー</a><a href="../terms/?lang=ja">利用規約</a></nav>
+</article>
+<article data-lang="ko" hidden>
+<h1>개인정보 보호</h1>
+<p class="updated">마지막 업데이트: 2026년 9월 17일</p>
+<h2>PathWe가 저장하는 것</h2>
+<p>두 분의 이름, 시작한 날, 추가한 모든 순간과 그 메모·사진, 핀을 꽂은 장소. 모두 이 iPhone 안의 PathWe 전용 저장 공간에 있어요. 로그인할 계정도 없고, 어디로도 보내지지 않아요.</p>
+<h2>사진</h2>
+<p>사진은 저장되기 전에 다시 인코딩돼요. 이때 카메라가 기록한 메타데이터(GPS 좌표와 촬영 시각 포함)가 지워져 저장 공간에 남지 않아요. PathWe가 추억에 대해 아는 장소는 두 분이 직접 핀을 꽂은 곳뿐이에요.</p>
+<h2>장소와 지도</h2>
+<p>지도에는 두 분이 핀을 꽂은 장소만 나타나요. 장소를 검색하거나, PathWe가 핀의 좌표를 도시나 나라 이름으로 바꿀 때는 그 한 번의 조회가 Apple 지도로 가요. iOS의 다른 지도와 같은 방식이며, Apple의 개인정보 처리방침이 적용돼요. 조회에 실패하면 PathWe는 핀에 좌표를 표시해요.</p>
+<h2>알림</h2>
+<p>알림은 이 iPhone에서 iOS가 예약하고 보내요. 알림을 받기 위해 추억에 대한 정보가 기기 밖으로 나가지 않아요.</p>
+<h2>Face ID와 암호</h2>
+<p>앱 잠금을 켜면 확인은 iOS가 하고, PathWe에는 통과했는지만 알려 줘요. 얼굴, 지문, 암호는 PathWe가 볼 수 없고 저장하지도 않아요.</p>
+<h2>PathWe Plus</h2>
+<p>구매는 App Store를 통해 이뤄져요. 결제는 Apple이 받고, 카드, Apple 계정, 청구지 주소는 PathWe가 볼 수 없어요. App Store의 구매 기록(어떤 플랜을, 언제, 얼마에)은 PathWe가 Plus 구독을 관리하는 데 쓰는 서비스인 RevenueCat과 공유돼요. 이 기록에는 이 iPhone에서 만든 무작위 ID만 담기고, 두 분의 이야기는 전혀 담기지 않아요.</p>
+<h2>PathWe가 하지 않는 것</h2>
+<p>추적도, 광고도, 앱 사용 방식에 대한 분석도 없어요. 위의 지도 검색과 App Store를 빼면 PathWe가 무언가를 보내는 곳은 RevenueCat뿐이에요. 'PathWe Plus' 항목에서 설명한 구매 기록과 앱·iOS 버전, 지역 같은 기본 정보만 보내요. 두 분의 이름, 순간, 메모, 사진, 장소는 이 iPhone 밖으로 나가지 않아요.</p>
+<h2>이야기를 끝낸다는 것</h2>
+<p>설정의 '우리 이야기 끝내기'는 이 iPhone에서 모든 날짜, 메모, 사진, 핀을 한 번에 지워요. 앱을 삭제해도 마찬가지예요. 어느 쪽도 사본을 남기지 않아요. 애초에 다른 곳에 사본이 없었으니까요.</p>
+<nav class="links"><a href="../?lang=ko">고객 지원</a><a href="../privacy/?lang=ko">개인정보 보호</a><a href="../terms/?lang=ko">이용약관</a></nav>
+</article>
+<article data-lang="de" hidden>
+<h1>Datenschutz</h1>
+<p class="updated">Zuletzt aktualisiert am 17. September 2026</p>
+<h2>Was PathWe speichert</h2>
+<p>Eure Namen, euer Startdatum, jeder Moment, den ihr hinzufügt, mit Notiz und Foto, und jeder Ort, den ihr markiert. Alles liegt im eigenen Speicher von PathWe auf diesem iPhone. Es gibt kein Konto zum Anmelden und keinen Ort, an den irgendetwas davon gesendet wird.</p>
+<h2>Fotos</h2>
+<p>Ein Foto wird vor dem Speichern neu kodiert. Dabei fallen die Metadaten weg, die eure Kamera hineingeschrieben hat — auch GPS-Koordinate und Zeitstempel —, sie werden also nie gespeichert. Der einzige Ort, den PathWe zu einer Erinnerung kennt, ist der, den ihr selbst markiert habt.</p>
+<h2>Orte und die Karte</h2>
+<p>Die Karte zeigt nur die Orte, die ihr markiert. Wenn ihr nach einem Ort sucht oder PathWe eine markierte Koordinate in einen Namen wie eine Stadt oder ein Land umwandelt, geht diese eine Abfrage an Apple Karten — so wie bei jeder Karte auf iOS, abgedeckt durch Apples Datenschutzrichtlinie. Schlägt die Abfrage fehl, beschriftet PathWe den Pin stattdessen mit seiner Koordinate.</p>
+<h2>Erinnerungen</h2>
+<p>Erinnerungen werden von iOS auf diesem iPhone geplant und zugestellt. Damit eine ankommt, verlässt nichts über einen Moment das Gerät.</p>
+<h2>Face ID und Code</h2>
+<p>Wenn ihr die App-Sperre einschaltet, prüft iOS und teilt PathWe nur mit, ob es geklappt hat. Euer Gesicht, euer Fingerabdruck und euer Code sind für PathWe nie zugänglich und werden von PathWe nie gespeichert.</p>
+<h2>PathWe Plus</h2>
+<p>Käufe laufen über den App Store. Apple nimmt die Zahlung entgegen; eure Karte, euer Apple Account und eure Rechnungsadresse sind für PathWe nie sichtbar. Der App-Store-Beleg eines Kaufs — welcher Plan, wann und zu welchem Preis — wird mit RevenueCat geteilt, dem Dienst, mit dem PathWe Plus-Abos verwaltet. Dieser Beleg trägt eine zufällige, auf diesem iPhone erzeugte ID und nichts aus eurer Geschichte.</p>
+<h2>Was PathWe nicht tut</h2>
+<p>Kein Tracking, keine Werbung und keine Analyse, wie ihr die App nutzt. Abgesehen von den Kartenabfragen oben und dem App Store sendet PathWe nur an RevenueCat etwas: die unter PathWe Plus beschriebenen Kaufbelege, mit Grunddaten wie App- und iOS-Version und eurer Region. Eure Namen, Momente, Notizen, Fotos und Orte verlassen dieses iPhone nie.</p>
+<h2>Eure Geschichte beenden</h2>
+<p>„Unsere Geschichte beenden“ in den Einstellungen löscht alle Daten, Notizen, Fotos und Pins auf einmal von diesem iPhone. Das Löschen der App tut dasselbe. Keins von beidem hinterlässt eine Kopie, denn es gab nie irgendwo anders eine.</p>
+<nav class="links"><a href="../?lang=de">Support</a><a href="../privacy/?lang=de">Datenschutz</a><a href="../terms/?lang=de">Nutzungsbedingungen</a></nav>
+</article>
+<article data-lang="fr" hidden>
+<h1>Confidentialité</h1>
+<p class="updated">Dernière mise à jour : 17 septembre 2026</p>
+<h2>Ce que PathWe conserve</h2>
+<p>Vos prénoms, votre date de début, chaque moment que vous ajoutez, sa note et sa photo, et chaque lieu que vous épinglez. Tout se trouve dans le stockage propre de PathWe sur cet iPhone. Il n'y a aucun compte où se connecter, et nulle part où quoi que ce soit serait envoyé.</p>
+<h2>Photos</h2>
+<p>Chaque photo est réencodée avant d'être enregistrée. Les métadonnées écrites par votre appareil — dont les coordonnées GPS et l'horodatage — sont ainsi supprimées et ne sont jamais enregistrées. Le seul lieu que PathWe connaît d'un souvenir est celui que vous avez épinglé vous-mêmes.</p>
+<h2>Les lieux et la carte</h2>
+<p>La carte n'affiche que les lieux que vous épinglez. Quand vous recherchez un lieu, ou quand PathWe transforme une coordonnée épinglée en nom de ville ou de pays, cette seule requête est envoyée à Plans d'Apple — comme pour toute carte sur iOS, et couverte par la politique de confidentialité d'Apple. Si la requête échoue, PathWe affiche la coordonnée sur l'épingle.</p>
+<h2>Rappels</h2>
+<p>Les rappels sont programmés et délivrés par iOS sur cet iPhone. Rien d'un moment ne quitte l'appareil pour qu'un rappel arrive.</p>
+<h2>Face ID et code</h2>
+<p>Si vous activez le verrouillage, iOS effectue la vérification et indique seulement à PathWe si elle a réussi. Votre visage, votre empreinte et votre code ne sont jamais accessibles à PathWe et ne sont jamais enregistrés par PathWe.</p>
+<h2>PathWe Plus</h2>
+<p>Les achats passent par l'App Store. Apple encaisse le paiement, et PathWe ne voit jamais votre carte, votre compte Apple ni votre adresse de facturation. Le reçu App Store d'un achat — quelle formule, quand et à quel prix — est partagé avec RevenueCat, le service que PathWe utilise pour suivre les abonnements Plus. Ce reçu porte un identifiant aléatoire créé sur cet iPhone, et rien de votre histoire.</p>
+<h2>Ce que PathWe ne fait pas</h2>
+<p>Aucun suivi, aucune publicité, aucune analyse de votre usage de l'app. En dehors des recherches de carte ci-dessus et de l'App Store, PathWe n'envoie quelque chose qu'à RevenueCat : les reçus d'achat décrits dans PathWe Plus, avec des informations de base comme la version de l'app et d'iOS et votre région. Vos noms, moments, notes, photos et lieux ne quittent jamais cet iPhone.</p>
+<h2>Mettre fin à votre histoire</h2>
+<p>« Mettre fin à notre histoire », dans Réglages, supprime d'un coup de cet iPhone toutes les dates, notes, photos et épingles. Supprimer l'app fait de même. Aucune des deux ne laisse de copie, car il n'y en a jamais eu ailleurs.</p>
+<nav class="links"><a href="../?lang=fr">Assistance</a><a href="../privacy/?lang=fr">Confidentialité</a><a href="../terms/?lang=fr">Conditions d'utilisation</a></nav>
+</article>
+<article data-lang="it" hidden>
+<h1>Privacy</h1>
+<p class="updated">Ultimo aggiornamento: 17 settembre 2026</p>
+<h2>Cosa conserva PathWe</h2>
+<p>I vostri nomi, la data di inizio, ogni momento che aggiungete, con nota e foto, e ogni luogo che segnate. Tutto si trova nello spazio di PathWe su questo iPhone. Non c'è nessun account a cui accedere, e nessun posto dove inviare qualcosa.</p>
+<h2>Foto</h2>
+<p>Ogni foto viene ricodificata prima di essere salvata. Così si eliminano i metadati scritti dalla fotocamera — comprese le coordinate GPS e l'ora dello scatto — che non vengono mai salvati. L'unico luogo che PathWe conosce di un ricordo è quello che avete segnato voi.</p>
+<h2>I luoghi e la mappa</h2>
+<p>La mappa mostra solo i luoghi che segnate. Quando cercate un luogo, o quando PathWe trasforma una coordinata segnata in un nome come una città o un paese, quell'unica ricerca va a Mappe di Apple — come per qualsiasi mappa su iOS, e coperta dall'informativa sulla privacy di Apple. Se la ricerca non riesce, PathWe etichetta il segnaposto con la sua coordinata.</p>
+<h2>Promemoria</h2>
+<p>I promemoria sono programmati e inviati da iOS su questo iPhone. Perché un promemoria arrivi, niente di un momento lascia il dispositivo.</p>
+<h2>Face ID e codice</h2>
+<p>Se attivate il blocco app, il controllo lo fa iOS e a PathWe comunica solo se è andato a buon fine. Il vostro volto, la vostra impronta e il vostro codice non sono mai accessibili a PathWe e PathWe non li salva mai.</p>
+<h2>PathWe Plus</h2>
+<p>Gli acquisti passano dall'App Store. Il pagamento lo riceve Apple, e PathWe non vede mai la vostra carta, il vostro Account Apple né l'indirizzo di fatturazione. La ricevuta App Store di un acquisto — quale piano, quando e a che prezzo — viene condivisa con RevenueCat, il servizio che PathWe usa per gestire gli abbonamenti Plus. Quella ricevuta contiene un ID casuale creato su questo iPhone, e niente della vostra storia.</p>
+<h2>Cosa PathWe non fa</h2>
+<p>Nessun tracciamento, nessuna pubblicità e nessuna analisi di come usate l'app. A parte le ricerche sulla mappa descritte sopra e l'App Store, PathWe invia qualcosa solo a RevenueCat: le ricevute d'acquisto descritte in PathWe Plus, con dati di base come la versione dell'app e di iOS e la vostra area geografica. I vostri nomi, momenti, note, foto e luoghi non lasciano mai questo iPhone.</p>
+<h2>Chiudere la vostra storia</h2>
+<p>«Chiudi la nostra storia», in Impostazioni, elimina in un colpo da questo iPhone tutte le date, le note, le foto e i segnaposto. Eliminare l'app fa lo stesso. Nessuna delle due lascia una copia, perché una copia altrove non c'è mai stata.</p>
+<nav class="links"><a href="../?lang=it">Assistenza</a><a href="../privacy/?lang=it">Privacy</a><a href="../terms/?lang=it">Termini d'uso</a></nav>
+</article>
+<article data-lang="id" hidden>
+<h1>Privasi</h1>
+<p class="updated">Terakhir diperbarui 17 September 2026</p>
+<h2>Yang disimpan PathWe</h2>
+<p>Nama kalian, tanggal mulai, setiap momen yang kalian tambahkan beserta catatan dan fotonya, dan setiap tempat yang kalian sematkan. Semuanya tersimpan di penyimpanan PathWe sendiri di iPhone ini. Tidak ada akun untuk masuk, dan tidak ada tempat ke mana semua itu dikirim.</p>
+<h2>Foto</h2>
+<p>Setiap foto dienkode ulang sebelum disimpan. Dengan begitu, metadata yang ditulis kamera — termasuk koordinat GPS dan waktu pengambilan — dihapus dan tidak pernah tersimpan. Satu-satunya lokasi yang diketahui PathWe tentang sebuah kenangan adalah lokasi yang kalian sematkan sendiri.</p>
+<h2>Tempat dan peta</h2>
+<p>Peta hanya menampilkan tempat yang kalian sematkan. Saat kalian mencari tempat, atau saat PathWe mengubah koordinat yang disematkan menjadi nama seperti kota atau negara, satu pencarian itu dikirim ke Apple Maps — sama seperti peta lain di iOS, dan tercakup oleh kebijakan privasi Apple. Jika pencarian gagal, PathWe menandai pin dengan koordinatnya.</p>
+<h2>Pengingat</h2>
+<p>Pengingat dijadwalkan dan dikirim oleh iOS di iPhone ini. Tidak ada informasi tentang momen yang keluar dari perangkat agar pengingat sampai.</p>
+<h2>Face ID dan kode sandi</h2>
+<p>Jika kalian mengaktifkan Kunci Aplikasi, pemeriksaan dilakukan oleh iOS dan PathWe hanya diberi tahu apakah berhasil. Wajah, sidik jari, dan kode sandi kalian tidak pernah bisa diakses dan tidak pernah disimpan oleh PathWe.</p>
+<h2>PathWe Plus</h2>
+<p>Pembelian dilakukan lewat App Store. Pembayaran diterima Apple, dan PathWe tidak pernah melihat kartu, Akun Apple, maupun alamat penagihan kalian. Catatan pembelian App Store — paket apa, kapan, dan berapa harganya — dibagikan ke RevenueCat, layanan yang dipakai PathWe untuk mencatat langganan Plus. Catatan itu memuat ID acak yang dibuat di iPhone ini, dan tidak memuat apa pun dari kisah kalian.</p>
+<h2>Yang tidak dilakukan PathWe</h2>
+<p>Tanpa pelacakan, tanpa iklan, dan tanpa analitik tentang cara kalian memakai aplikasi. Selain pencarian peta di atas dan App Store, satu-satunya tempat PathWe mengirim sesuatu adalah RevenueCat: catatan pembelian yang dijelaskan di bagian PathWe Plus, beserta info dasar seperti versi aplikasi dan iOS serta wilayah kalian. Nama, momen, catatan, foto, dan tempat kalian tidak pernah keluar dari iPhone ini.</p>
+<h2>Mengakhiri kisah kalian</h2>
+<p>"Akhiri kisah kita" di Pengaturan menghapus semua tanggal, catatan, foto, dan pin dari iPhone ini sekaligus. Menghapus aplikasi juga sama. Keduanya tidak meninggalkan salinan, karena memang tidak pernah ada salinan di tempat lain.</p>
+<nav class="links"><a href="../?lang=id">Bantuan</a><a href="../privacy/?lang=id">Privasi</a><a href="../terms/?lang=id">Ketentuan penggunaan</a></nav>
+</article>
+<article data-lang="vi" hidden>
+<h1>Quyền riêng tư</h1>
+<p class="updated">Cập nhật lần cuối: 17 tháng 9, 2026</p>
+<h2>Những gì PathWe lưu</h2>
+<p>Tên của hai bạn, ngày bắt đầu, mọi khoảnh khắc hai bạn thêm cùng ghi chú và ảnh, và mọi nơi hai bạn ghim. Tất cả nằm trong bộ nhớ riêng của PathWe trên iPhone này. Không có tài khoản để đăng nhập, và không có nơi nào để gửi những thứ đó đi.</p>
+<h2>Ảnh</h2>
+<p>Mỗi bức ảnh được mã hóa lại trước khi lưu. Nhờ vậy, siêu dữ liệu do máy ảnh ghi vào — gồm tọa độ GPS và thời điểm chụp — bị loại bỏ và không bao giờ được lưu lại. Địa điểm duy nhất PathWe biết về một kỷ niệm là nơi hai bạn tự ghim.</p>
+<h2>Địa điểm và bản đồ</h2>
+<p>Bản đồ chỉ hiển thị những nơi hai bạn ghim. Khi hai bạn tìm một địa điểm, hoặc khi PathWe chuyển tọa độ đã ghim thành tên như thành phố hay quốc gia, lượt tra cứu đó được gửi đến Apple Bản đồ — giống mọi bản đồ khác trên iOS, và tuân theo chính sách quyền riêng tư của Apple. Nếu tra cứu thất bại, PathWe sẽ ghi tọa độ lên ghim.</p>
+<h2>Lời nhắc</h2>
+<p>Lời nhắc được iOS lên lịch và gửi trên iPhone này. Không có thông tin nào về khoảnh khắc rời khỏi thiết bị để lời nhắc đến được.</p>
+<h2>Face ID và mật mã</h2>
+<p>Khi hai bạn bật Khóa ứng dụng, iOS sẽ kiểm tra và chỉ báo cho PathWe biết có thành công hay không. Khuôn mặt, vân tay và mật mã của hai bạn không bao giờ được PathWe truy cập hay lưu trữ.</p>
+<h2>PathWe Plus</h2>
+<p>Giao dịch mua được thực hiện qua App Store. Apple nhận thanh toán, và PathWe không bao giờ thấy thẻ, Tài khoản Apple hay địa chỉ thanh toán của hai bạn. Thông tin giao dịch trên App Store — gói nào, khi nào, giá bao nhiêu — được chia sẻ với RevenueCat, dịch vụ PathWe dùng để quản lý gói đăng ký Plus. Thông tin đó chỉ chứa một mã ngẫu nhiên tạo trên iPhone này, không chứa gì từ câu chuyện của hai bạn.</p>
+<h2>Điều PathWe không làm</h2>
+<p>Không theo dõi, không quảng cáo, không phân tích cách hai bạn dùng ứng dụng. Ngoài các lượt tra cứu bản đồ ở trên và App Store, nơi duy nhất PathWe gửi dữ liệu là RevenueCat: thông tin giao dịch mua được mô tả trong mục PathWe Plus, kèm thông tin cơ bản như phiên bản ứng dụng, phiên bản iOS và khu vực. Tên, khoảnh khắc, ghi chú, ảnh và địa điểm của hai bạn không bao giờ rời khỏi iPhone này.</p>
+<h2>Kết thúc câu chuyện</h2>
+<p>"Kết thúc câu chuyện của chúng mình" trong Cài đặt sẽ xóa cùng lúc mọi ngày, ghi chú, ảnh và ghim khỏi iPhone này. Xóa ứng dụng cũng vậy. Cả hai đều không để lại bản sao, vì chưa từng có bản sao ở nơi nào khác.</p>
+<nav class="links"><a href="../?lang=vi">Hỗ trợ</a><a href="../privacy/?lang=vi">Quyền riêng tư</a><a href="../terms/?lang=vi">Điều khoản sử dụng</a></nav>
+</article>
+<article data-lang="th" hidden>
+<h1>ความเป็นส่วนตัว</h1>
+<p class="updated">อัปเดตล่าสุด 17 กันยายน 2026</p>
+<h2>สิ่งที่ PathWe เก็บ</h2>
+<p>ชื่อของคุณทั้งคู่ วันที่เริ่มต้น ทุกช่วงเวลาที่เพิ่มพร้อมบันทึกและรูปภาพ และทุกสถานที่ที่ปักหมุด ทั้งหมดอยู่ในพื้นที่จัดเก็บของ PathWe เองบน iPhone เครื่องนี้ ไม่มีบัญชีให้ลงชื่อเข้า และไม่มีที่ใดที่ข้อมูลจะถูกส่งไป</p>
+<h2>รูปภาพ</h2>
+<p>รูปภาพจะถูกเข้ารหัสใหม่ก่อนบันทึก ทำให้ข้อมูลเมตาที่กล้องเขียนไว้ — รวมถึงพิกัด GPS และเวลาที่ถ่าย — ถูกลบออกและไม่ถูกบันทึกเลย สถานที่เดียวที่ PathWe รู้เกี่ยวกับความทรงจำคือสถานที่ที่คุณปักหมุดเอง</p>
+<h2>สถานที่และแผนที่</h2>
+<p>แผนที่แสดงเฉพาะสถานที่ที่คุณปักหมุด เมื่อค้นหาสถานที่ หรือเมื่อ PathWe แปลงพิกัดที่ปักหมุดเป็นชื่อเมืองหรือประเทศ การค้นหาครั้งนั้นจะส่งไปยังแผนที่ของ Apple — เช่นเดียวกับแผนที่อื่นๆ บน iOS และอยู่ภายใต้นโยบายความเป็นส่วนตัวของ Apple หากค้นหาไม่สำเร็จ PathWe จะแสดงพิกัดบนหมุดแทน</p>
+<h2>การเตือน</h2>
+<p>iOS เป็นผู้ตั้งเวลาและส่งการเตือนบน iPhone เครื่องนี้ ไม่มีข้อมูลเกี่ยวกับช่วงเวลาใดออกจากอุปกรณ์เพื่อให้การเตือนมาถึง</p>
+<h2>Face ID และรหัส</h2>
+<p>เมื่อเปิดล็อคแอป iOS จะเป็นผู้ตรวจสอบและแจ้ง PathWe เพียงว่าผ่านหรือไม่ ใบหน้า ลายนิ้วมือ และรหัสของคุณไม่เคยถูกเปิดให้ PathWe เข้าถึงและไม่เคยถูกจัดเก็บ</p>
+<h2>PathWe Plus</h2>
+<p>การซื้อทำผ่าน App Store โดย Apple เป็นผู้รับชำระเงิน PathWe ไม่เคยเห็นบัตร บัญชี Apple หรือที่อยู่สำหรับเรียกเก็บเงินของคุณ ข้อมูลการซื้อจาก App Store — แผนไหน เมื่อไร และราคาเท่าไร — จะถูกแชร์กับ RevenueCat ซึ่งเป็นบริการที่ PathWe ใช้ติดตามการสมัครสมาชิก Plus ข้อมูลนั้นมีเพียงรหัสสุ่มที่สร้างบน iPhone เครื่องนี้ และไม่มีอะไรจากเรื่องราวของคุณ</p>
+<h2>สิ่งที่ PathWe ไม่ทำ</h2>
+<p>ไม่มีการติดตาม ไม่มีโฆษณา และไม่มีการวิเคราะห์การใช้งานแอป นอกจากการค้นหาแผนที่ข้างต้นและ App Store แล้ว ที่เดียวที่ PathWe ส่งข้อมูลไปคือ RevenueCat ได้แก่ ข้อมูลการซื้อตามที่อธิบายไว้ในหัวข้อ PathWe Plus พร้อมข้อมูลพื้นฐาน เช่น เวอร์ชันแอปและ iOS และภูมิภาค ชื่อ ช่วงเวลา บันทึก รูปภาพ และสถานที่ของคุณไม่เคยออกจาก iPhone เครื่องนี้</p>
+<h2>การปิดเรื่องราว</h2>
+<p>"ปิดเรื่องราวของเรา" ในการตั้งค่าจะลบวันที่ บันทึก รูปภาพ และหมุดทั้งหมดออกจาก iPhone เครื่องนี้ในครั้งเดียว การลบแอปก็เช่นกัน ทั้งสองวิธีไม่เหลือสำเนาไว้ เพราะไม่เคยมีสำเนาอยู่ที่อื่นเลย</p>
+<nav class="links"><a href="../?lang=th">ช่วยเหลือ</a><a href="../privacy/?lang=th">ความเป็นส่วนตัว</a><a href="../terms/?lang=th">ข้อกำหนดการใช้งาน</a></nav>
+</article>
+<article data-lang="zh" hidden>
+<h1>隐私</h1>
+<p class="updated">最后更新：2026年9月17日</p>
+<h2>PathWe 保存的内容</h2>
+<p>你们的名字、开始日期、添加的每个时刻及其备注和照片，以及标记的每个地点。所有内容都存放在这台 iPhone 上 PathWe 自己的存储空间里。没有需要登录的账户，也没有任何地方会接收这些内容。</p>
+<h2>照片</h2>
+<p>照片在保存前会重新编码，相机写入的元数据（包括 GPS 坐标和拍摄时间）会被清除，永远不会被存储。PathWe 知道的回忆地点，只有你们亲手标记的那个。</p>
+<h2>地点与地图</h2>
+<p>地图只显示你们标记的地点。当你们搜索地点，或 PathWe 将标记的坐标转换为城市或国家名称时，这一次查询会发送到 Apple 地图——与 iOS 上的其他地图相同，并受 Apple 隐私政策保护。如果查询失败，PathWe 会改用坐标标注图钉。</p>
+<h2>提醒</h2>
+<p>提醒由这台 iPhone 上的 iOS 安排和发送。为了送达提醒，任何关于时刻的信息都不会离开设备。</p>
+<h2>面容 ID 与密码</h2>
+<p>开启 App 锁后，由 iOS 进行验证，只告诉 PathWe 是否通过。你们的面容、指纹和密码永远不会提供给 PathWe，也不会被 PathWe 存储。</p>
+<h2>PathWe Plus</h2>
+<p>购买通过 App Store 完成。付款由 Apple 收取，PathWe 永远看不到你们的银行卡、Apple 账户或账单地址。App Store 的购买记录（哪个方案、何时购买、价格多少）会与 RevenueCat 共享，这是 PathWe 用来管理 Plus 订阅的服务。该记录只包含在这台 iPhone 上生成的随机 ID，不含你们故事中的任何内容。</p>
+<h2>PathWe 不会做的事</h2>
+<p>没有跟踪，没有广告，也不会分析你们如何使用 App。除了上面提到的地图查询和 App Store，PathWe 只会向 RevenueCat 发送数据：即“PathWe Plus”部分所述的购买记录，以及 App 和 iOS 版本、所在地区等基本信息。你们的名字、时刻、备注、照片和地点永远不会离开这台 iPhone。</p>
+<h2>结束你们的故事</h2>
+<p>设置中的“结束我们的故事”会一次性删除这台 iPhone 上的所有日期、备注、照片和图钉。删除 App 也是一样。两种方式都不会留下副本，因为副本从未存在于其他任何地方。</p>
+<nav class="links"><a href="../?lang=zh">支持</a><a href="../privacy/?lang=zh">隐私</a><a href="../terms/?lang=zh">使用条款</a></nav>
+</article>
 </main>
 <script>
 (function(){
   var q=new URLSearchParams(location.search).get('lang');
-  var pick=q||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');
+  var known=['en','tr','es','pt','ja','ko','de','fr','it','id','vi','th','zh'];
+  var pick=q||(navigator.language||'').toLowerCase().slice(0,2);
   function show(l){
     document.documentElement.lang=l;
     document.querySelectorAll('[data-lang]').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l});
-    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.value===l)});
+    document.querySelector('.lang select').value=l;
     document.title=document.querySelector('[data-lang="'+l+'"] h1').textContent+' — PathWe';
   }
-  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){show(b.value)})});
-  show(pick==='tr'?'tr':'en');
+  document.querySelector('.lang select').addEventListener('change',function(e){show(e.target.value)});
+  show(known.indexOf(pick)>=0?pick:'en');
 })();
 </script>
 </body>

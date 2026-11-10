@@ -17,9 +17,7 @@ body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.6 Figtree,-
 main{max-width:640px;margin:0 auto;padding:48px 20px 72px}
 .top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:40px}
 .brand{font:400 22px/1 "Instrument Serif",Georgia,serif;color:var(--text);text-decoration:none}
-.lang{display:flex;gap:4px}
-.lang button{font:600 13px/1 Figtree,sans-serif;letter-spacing:.04em;color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer}
-.lang button[aria-pressed=true]{color:var(--text);border-color:var(--muted)}
+.lang select{font:600 13px/1 Figtree,sans-serif;color:var(--text);background:none;border:1px solid var(--rule);border-radius:999px;padding:7px 12px;cursor:pointer;-webkit-appearance:none;appearance:none}
 h1{font:400 44px/1.1 "Instrument Serif",Georgia,serif;margin:0 0 8px;letter-spacing:-.01em}
 .updated{color:var(--muted);font-size:13px;letter-spacing:.06em;text-transform:uppercase;margin:0 0 32px;padding-bottom:24px;border-bottom:1px solid var(--rule)}
 h2{font:600 17px/1.4 Figtree,sans-serif;margin:32px 0 6px}
@@ -27,6 +25,8 @@ p{margin:0 0 12px}
 a{color:var(--link);text-underline-offset:3px}
 nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);display:flex;gap:20px;flex-wrap:wrap;font-size:15px}
 [hidden]{display:none!important}
+html[lang=vi] body,html[lang=vi] h2,html[lang=vi] .lang select{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+html[lang=vi] h1,html[lang=vi] .brand{font-family:"New York",Georgia,serif}
 @media (max-width:480px){h1{font-size:34px}main{padding-top:32px}}
 </style>
 </head>
@@ -34,9 +34,22 @@ nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);disp
 <main>
 <div class="top">
   <a class="brand" href="./">PathWe</a>
-  <div class="lang" role="group" aria-label="Language">
-    <button type="button" value="en" aria-pressed="true">EN</button>
-    <button type="button" value="tr" aria-pressed="false">TR</button>
+  <div class="lang">
+  <select aria-label="Language">
+    <option value="en" selected>English</option>
+    <option value="tr">Türkçe</option>
+    <option value="es">Español</option>
+    <option value="pt">Português</option>
+    <option value="ja">日本語</option>
+    <option value="ko">한국어</option>
+    <option value="de">Deutsch</option>
+    <option value="fr">Français</option>
+    <option value="it">Italiano</option>
+    <option value="id">Bahasa Indonesia</option>
+    <option value="vi">Tiếng Việt</option>
+    <option value="th">ไทย</option>
+    <option value="zh">简体中文</option>
+  </select>
   </div>
 </div>
 <article data-lang="en">
@@ -65,19 +78,163 @@ nav.links{margin-top:48px;padding-top:24px;border-top:1px solid var(--rule);disp
 <p>PathWe her şeyi iPhone'unuzda tutar ve kendine ait bir bulutu yoktur. Hikayenizi yeni bir telefona taşımanın tek yolu iPhone'unuzun iCloud ya da bilgisayar yedeğidir; lütfen bir yedek tutun.</p>
 <nav class="links"><a href="privacy/?lang=tr">Gizlilik</a><a href="terms/?lang=tr">Kullanım koşulları</a></nav>
 </article>
+<article data-lang="es" hidden>
+<h1>Soporte de PathWe</h1>
+<p class="updated">La historia de una relación, en una línea de tiempo y un mapa</p>
+<h2>Escriban a PathWe</h2>
+<p>Preguntas, un error o algo que no funciona como debería: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Por favor, indiquen el modelo de su iPhone y la versión de iOS.</p>
+<h2>Restaurar PathWe Plus</h2>
+<p>En un iPhone nuevo o después de reinstalar la app, abran Configuración en PathWe y toquen Restaurar compra, con la sesión iniciada en la cuenta de Apple con la que compraron Plus.</p>
+<h2>Cancelar una suscripción</h2>
+<p>El App Store cobra las suscripciones. Adminístrenlas o cancélenlas en la app Configuración, tocando su nombre → Suscripciones. Apple gestiona los reembolsos en reportaproblem.apple.com.</p>
+<h2>Su historia y los respaldos</h2>
+<p>PathWe guarda todo en su iPhone y no tiene nube propia. Un respaldo del iPhone en iCloud o en una computadora es la única forma de llevar su historia a un teléfono nuevo, así que, por favor, tengan uno.</p>
+<nav class="links"><a href="privacy/?lang=es">Privacidad</a><a href="terms/?lang=es">Términos de uso</a></nav>
+</article>
+<article data-lang="pt" hidden>
+<h1>Suporte do PathWe</h1>
+<p class="updated">A história de um relacionamento, numa linha do tempo e num mapa</p>
+<h2>Escrevam para o PathWe</h2>
+<p>Dúvidas, um erro ou algo que não funciona como deveria: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Por favor, informem o modelo do iPhone e a versão do iOS.</p>
+<h2>Restaurar o PathWe Plus</h2>
+<p>Num iPhone novo ou depois de reinstalar o app, abram Ajustes no PathWe e toquem em Restaurar compra, com a sessão iniciada na Conta Apple usada para comprar o Plus.</p>
+<h2>Cancelar uma assinatura</h2>
+<p>As assinaturas são cobradas pela App Store. Gerenciem ou cancelem no app Ajustes, tocando no seu nome → Assinaturas. Os reembolsos são feitos pela Apple em reportaproblem.apple.com.</p>
+<h2>A história de vocês e os backups</h2>
+<p>O PathWe guarda tudo no iPhone e não tem nuvem própria. Um backup do iPhone no iCloud ou num computador é a única forma de levar a história de vocês para um celular novo, então, por favor, mantenham um.</p>
+<nav class="links"><a href="privacy/?lang=pt">Privacidade</a><a href="terms/?lang=pt">Termos de uso</a></nav>
+</article>
+<article data-lang="ja" hidden>
+<h1>PathWe サポート</h1>
+<p class="updated">ふたりの物語を、タイムラインと地図に</p>
+<h2>PathWeへのお問い合わせ</h2>
+<p>ご質問、不具合、思ったとおりに動かないことがあれば：<a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>。お使いのiPhoneの機種とiOSのバージョンもお書き添えください。</p>
+<h2>PathWe Plusの復元</h2>
+<p>新しいiPhoneや再インストール後は、Plusを購入したApple AccountでサインインしたままPathWeの「設定」を開き、「購入を復元」をタップしてください。</p>
+<h2>サブスクリプションの解約</h2>
+<p>サブスクリプションはApp Storeで請求されます。「設定」アプリでご自分の名前 →「サブスクリプション」から管理・解約できます。返金はAppleがreportaproblem.apple.comで受け付けています。</p>
+<h2>おふたりの物語とバックアップ</h2>
+<p>PathWeはすべてをiPhoneの中に保存し、独自のクラウドを持ちません。新しいiPhoneに物語を移す方法は、iCloudまたはコンピュータによるiPhoneのバックアップだけです。必ずバックアップを取っておいてください。</p>
+<nav class="links"><a href="privacy/?lang=ja">プライバシー</a><a href="terms/?lang=ja">利用規約</a></nav>
+</article>
+<article data-lang="ko" hidden>
+<h1>PathWe 고객 지원</h1>
+<p class="updated">두 분의 이야기를 타임라인과 지도 위에</p>
+<h2>PathWe에 문의하기</h2>
+<p>궁금한 점, 오류, 생각대로 작동하지 않는 부분이 있다면: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. 사용 중인 iPhone 모델과 iOS 버전도 함께 적어 주세요.</p>
+<h2>PathWe Plus 복원</h2>
+<p>새 iPhone이나 재설치 후에는 Plus를 구매한 Apple 계정으로 로그인한 상태에서 PathWe의 설정을 열고 '구매 복원'을 탭해 주세요.</p>
+<h2>구독 해지</h2>
+<p>구독은 App Store에서 결제돼요. 설정 앱에서 내 이름 → 구독으로 들어가 관리하거나 해지할 수 있어요. 환불은 Apple이 reportaproblem.apple.com에서 처리해요.</p>
+<h2>두 분의 이야기와 백업</h2>
+<p>PathWe는 모든 것을 iPhone 안에 저장하고, 자체 클라우드가 없어요. 새 iPhone으로 이야기를 옮기는 방법은 iCloud나 컴퓨터를 통한 iPhone 백업뿐이니, 꼭 백업해 두세요.</p>
+<nav class="links"><a href="privacy/?lang=ko">개인정보 보호</a><a href="terms/?lang=ko">이용약관</a></nav>
+</article>
+<article data-lang="de" hidden>
+<h1>PathWe Support</h1>
+<p class="updated">Die Geschichte einer Beziehung, auf einer Zeitleiste und einer Karte</p>
+<h2>Schreibt an PathWe</h2>
+<p>Fragen, ein Fehler oder etwas, das nicht so funktioniert, wie es sollte: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Bitte nennt euer iPhone-Modell und eure iOS-Version.</p>
+<h2>PathWe Plus wiederherstellen</h2>
+<p>Auf einem neuen iPhone oder nach einer Neuinstallation öffnet ihr in PathWe die Einstellungen und tippt auf „Kauf wiederherstellen“ — angemeldet mit dem Apple Account, mit dem ihr Plus gekauft habt.</p>
+<h2>Ein Abo kündigen</h2>
+<p>Abos werden über den App Store abgerechnet. Ihr verwaltet oder kündigt sie in der App „Einstellungen“ unter eurem Namen → Abonnements. Erstattungen bearbeitet Apple unter reportaproblem.apple.com.</p>
+<h2>Eure Geschichte und Backups</h2>
+<p>PathWe speichert alles auf eurem iPhone und hat keine eigene Cloud. Ein iCloud- oder Computer-Backup eures iPhone ist der einzige Weg, eure Geschichte auf ein neues iPhone mitzunehmen — bitte legt eins an.</p>
+<nav class="links"><a href="privacy/?lang=de">Datenschutz</a><a href="terms/?lang=de">Nutzungsbedingungen</a></nav>
+</article>
+<article data-lang="fr" hidden>
+<h1>Assistance PathWe</h1>
+<p class="updated">L'histoire d'un couple, sur une frise et une carte</p>
+<h2>Écrivez à PathWe</h2>
+<p>Une question, un bug ou quelque chose qui ne marche pas comme prévu : <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Merci d'indiquer le modèle de votre iPhone et votre version d'iOS.</p>
+<h2>Restaurer PathWe Plus</h2>
+<p>Sur un nouvel iPhone ou après une réinstallation, ouvrez Réglages dans PathWe et touchez « Restaurer l'achat », connecté avec le compte Apple qui a acheté Plus.</p>
+<h2>Résilier un abonnement</h2>
+<p>Les abonnements sont facturés par l'App Store. Gérez-les ou résiliez-les dans l'app Réglages, en touchant votre nom → Abonnements. Les remboursements sont traités par Apple sur reportaproblem.apple.com.</p>
+<h2>Votre histoire et les sauvegardes</h2>
+<p>PathWe garde tout sur votre iPhone et n'a pas de cloud. Une sauvegarde de l'iPhone sur iCloud ou un ordinateur est le seul moyen d'emporter votre histoire sur un nouvel iPhone — pensez à en garder une.</p>
+<nav class="links"><a href="privacy/?lang=fr">Confidentialité</a><a href="terms/?lang=fr">Conditions d'utilisation</a></nav>
+</article>
+<article data-lang="it" hidden>
+<h1>Assistenza PathWe</h1>
+<p class="updated">La storia di una coppia, su una linea del tempo e una mappa</p>
+<h2>Scrivete a PathWe</h2>
+<p>Domande, un errore o qualcosa che non funziona come dovrebbe: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Indicate il modello del vostro iPhone e la versione di iOS.</p>
+<h2>Ripristinare PathWe Plus</h2>
+<p>Su un nuovo iPhone o dopo una reinstallazione, aprite Impostazioni in PathWe e toccate «Ripristina acquisto», con l'Account Apple con cui avete acquistato Plus.</p>
+<h2>Disdire un abbonamento</h2>
+<p>Gli abbonamenti sono addebitati dall'App Store. Gestiteli o disdite nell'app Impostazioni, toccando il vostro nome → Abbonamenti. I rimborsi sono gestiti da Apple su reportaproblem.apple.com.</p>
+<h2>La vostra storia e i backup</h2>
+<p>PathWe conserva tutto sul vostro iPhone e non ha un cloud. Un backup dell'iPhone su iCloud o su un computer è l'unico modo per portare la vostra storia su un nuovo iPhone — tenetene uno.</p>
+<nav class="links"><a href="privacy/?lang=it">Privacy</a><a href="terms/?lang=it">Termini d'uso</a></nav>
+</article>
+<article data-lang="id" hidden>
+<h1>Bantuan PathWe</h1>
+<p class="updated">Kisah sebuah hubungan, di linimasa dan peta</p>
+<h2>Hubungi PathWe</h2>
+<p>Pertanyaan, bug, atau sesuatu yang tidak berjalan semestinya: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Sertakan model iPhone dan versi iOS kalian.</p>
+<h2>Memulihkan PathWe Plus</h2>
+<p>Di iPhone baru atau setelah instal ulang, buka Pengaturan di PathWe lalu ketuk Pulihkan pembelian, dengan Akun Apple yang dipakai untuk membeli Plus.</p>
+<h2>Membatalkan langganan</h2>
+<p>Langganan ditagih oleh App Store. Kelola atau batalkan di app Pengaturan, ketuk nama kalian → Langganan. Pengembalian dana ditangani Apple di reportaproblem.apple.com.</p>
+<h2>Kisah kalian dan cadangan</h2>
+<p>PathWe menyimpan semuanya di iPhone kalian dan tidak punya cloud. Cadangan iPhone di iCloud atau komputer adalah satu-satunya cara memindahkan kisah kalian ke iPhone baru — jadi buatlah cadangan.</p>
+<nav class="links"><a href="privacy/?lang=id">Privasi</a><a href="terms/?lang=id">Ketentuan penggunaan</a></nav>
+</article>
+<article data-lang="vi" hidden>
+<h1>Hỗ trợ PathWe</h1>
+<p class="updated">Câu chuyện của một tình yêu, trên dòng thời gian và bản đồ</p>
+<h2>Liên hệ PathWe</h2>
+<p>Câu hỏi, lỗi hoặc điều gì chưa hoạt động như mong đợi: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>. Vui lòng ghi kèm dòng iPhone và phiên bản iOS.</p>
+<h2>Khôi phục PathWe Plus</h2>
+<p>Trên iPhone mới hoặc sau khi cài lại, mở Cài đặt trong PathWe và chạm vào Khôi phục giao dịch, khi đang đăng nhập Tài khoản Apple đã mua Plus.</p>
+<h2>Hủy gói đăng ký</h2>
+<p>Gói đăng ký được thanh toán qua App Store. Quản lý hoặc hủy trong ứng dụng Cài đặt, chạm vào tên của bạn → Đăng ký. Apple xử lý hoàn tiền tại reportaproblem.apple.com.</p>
+<h2>Câu chuyện và sao lưu</h2>
+<p>PathWe lưu mọi thứ trên iPhone và không có đám mây riêng. Bản sao lưu iPhone qua iCloud hoặc máy tính là cách duy nhất để mang câu chuyện sang iPhone mới — hãy luôn có một bản.</p>
+<nav class="links"><a href="privacy/?lang=vi">Quyền riêng tư</a><a href="terms/?lang=vi">Điều khoản sử dụng</a></nav>
+</article>
+<article data-lang="th" hidden>
+<h1>ช่วยเหลือ PathWe</h1>
+<p class="updated">เรื่องราวความรัก บนไทม์ไลน์และแผนที่</p>
+<h2>ติดต่อ PathWe</h2>
+<p>มีคำถาม พบข้อผิดพลาด หรือมีอะไรทำงานไม่ถูกต้อง: <a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a> โปรดระบุรุ่น iPhone และเวอร์ชัน iOS</p>
+<h2>กู้คืน PathWe Plus</h2>
+<p>บน iPhone เครื่องใหม่หรือหลังติดตั้งใหม่ ให้เปิดการตั้งค่าใน PathWe แล้วแตะ กู้คืนการซื้อ โดยลงชื่อเข้าด้วยบัญชี Apple ที่ใช้ซื้อ Plus</p>
+<h2>ยกเลิกการสมัครสมาชิก</h2>
+<p>การสมัครสมาชิกเรียกเก็บเงินโดย App Store จัดการหรือยกเลิกได้ในแอปการตั้งค่า แตะชื่อของคุณ → การสมัครสมาชิก Apple ดูแลการคืนเงินที่ reportaproblem.apple.com</p>
+<h2>เรื่องราวของคุณและการสำรองข้อมูล</h2>
+<p>PathWe เก็บทุกอย่างไว้บน iPhone และไม่มีคลาวด์ของตัวเอง การสำรองข้อมูล iPhone ผ่าน iCloud หรือคอมพิวเตอร์เป็นทางเดียวที่จะย้ายเรื่องราวไปยัง iPhone เครื่องใหม่ โปรดสำรองไว้เสมอ</p>
+<nav class="links"><a href="privacy/?lang=th">ความเป็นส่วนตัว</a><a href="terms/?lang=th">ข้อกำหนดการใช้งาน</a></nav>
+</article>
+<article data-lang="zh" hidden>
+<h1>PathWe 支持</h1>
+<p class="updated">一段感情的故事，在时间线上，也在地图上</p>
+<h2>联系 PathWe</h2>
+<p>有疑问、发现错误或功能不正常：<a href="mailto:madebybuse@gmail.com">madebybuse@gmail.com</a>。请注明你们的 iPhone 型号和 iOS 版本。</p>
+<h2>恢复 PathWe Plus</h2>
+<p>在新 iPhone 上或重新安装后，请用购买 Plus 的 Apple 账户登录，打开 PathWe 的设置，轻点“恢复购买”。</p>
+<h2>取消订阅</h2>
+<p>订阅由 App Store 收费。可在“设置”App 中轻点你的名字 →“订阅”进行管理或取消。退款由 Apple 在 reportaproblem.apple.com 处理。</p>
+<h2>你们的故事与备份</h2>
+<p>PathWe 把所有内容保存在你们的 iPhone 上，没有自己的云端。通过 iCloud 或电脑备份 iPhone 是把故事带到新 iPhone 的唯一方法，请务必保留一份备份。</p>
+<nav class="links"><a href="privacy/?lang=zh">隐私</a><a href="terms/?lang=zh">使用条款</a></nav>
+</article>
 </main>
 <script>
 (function(){
   var q=new URLSearchParams(location.search).get('lang');
-  var pick=q||((navigator.language||'').toLowerCase().indexOf('tr')===0?'tr':'en');
+  var known=['en','tr','es','pt','ja','ko','de','fr','it','id','vi','th','zh'];
+  var pick=q||(navigator.language||'').toLowerCase().slice(0,2);
   function show(l){
     document.documentElement.lang=l;
     document.querySelectorAll('[data-lang]').forEach(function(e){e.hidden=e.getAttribute('data-lang')!==l});
-    document.querySelectorAll('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.value===l)});
+    document.querySelector('.lang select').value=l;
     document.title=document.querySelector('[data-lang="'+l+'"] h1').textContent+' — PathWe';
   }
-  document.querySelectorAll('.lang button').forEach(function(b){b.addEventListener('click',function(){show(b.value)})});
-  show(pick==='tr'?'tr':'en');
+  document.querySelector('.lang select').addEventListener('change',function(e){show(e.target.value)});
+  show(known.indexOf(pick)>=0?pick:'en');
 })();
 </script>
 </body>
